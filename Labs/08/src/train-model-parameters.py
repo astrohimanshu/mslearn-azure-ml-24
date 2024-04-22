@@ -7,6 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import roc_curve
 import matplotlib.pyplot as plt
+import glob
 
 def main(args):
     # read data
@@ -24,8 +25,9 @@ def main(args):
 # function that reads the data
 def get_data(path):
     print("Reading data...")
-    df = pd.read_csv(path)
-    
+    all_files = glob.glob(path + "/*.csv")
+    df = pd.concat((pd.read_csv(f) for f in all_files), sort=False)
+    #df = pd.read_csv(all_files)
     return df
 
 # function that splits the data
