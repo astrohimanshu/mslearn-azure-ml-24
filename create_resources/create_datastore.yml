@@ -1,0 +1,9 @@
+# my_blob_datastore.yml
+$schema: https://azuremlschemas.azureedge.net/latest/azureBlob.schema.json
+name: test_blob
+type: azure_blob
+description: Datastore pointing to a blob container.
+account_name: XXXXXXXXXXXXXXXXXXXXXXXX
+container_name: training-data
+credentials: 
+ account_key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx

@@ -1,0 +1,4 @@
+inputs:
+  patient-data-unlabeled:
+    type: uri_folder
+    path: azureml:patient-data-unlabeled:1
